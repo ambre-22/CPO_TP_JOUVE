@@ -37,6 +37,42 @@ public class Calculator {
        System.out.println("Choisissez un deuxieme chiffre");
        operande2=sc.nextInt();
         
-    }
+        int resultat = 0;
+        switch (operateur) {
+            case 1: 
+                resultat = operande1 + operande2;
+                break;
+            case 2: 
+                resultat = operande1 - operande2;
+                break;
+            case 3: 
+                resultat = operande1 * operande2;
+                break;
+            case 4: 
+                if (operande2 != 0) {
+                    resultat = operande1 / operande2;
+                } else {
+                    System.out.println("Erreur : Division par zero impossible.");
+                    return;
+                }
+                break;
+            case 5: 
+                if (operande2 != 0) {
+                    resultat = operande1 % operande2;
+                } else {
+                    System.out.println("Erreur : Modulo par zero impossible.");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Operateur invalide.");
+                return;
+        }
+
     
+        System.out.println("Le resultat de l'operation est : " + resultat);
+
+        scanner.close();
+    }
 }
+   
