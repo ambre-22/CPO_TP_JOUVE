@@ -31,10 +31,12 @@ public class TP1_manipNombresLnt_JOUVE {
         int difference = premierEntier - deuxiemeEntier;
         int produit = premierEntier * deuxiemeEntier;
         
+        // Calcul de la somme, différence, produit
          System.out.println("La somme des deux nombres est : " + somme);
         System.out.println("La difference des deux nombres est : " + difference);
         System.out.println("Le produit des deux nombres est : " + produit);
         
+        // Pour éviter une division par zéro et calcul du quotient et  du reste
          if (deuxiemeEntier != 0) {
             int quotient = premierEntier / deuxiemeEntier;
             int reste = premierEntier % deuxiemeEntier;
