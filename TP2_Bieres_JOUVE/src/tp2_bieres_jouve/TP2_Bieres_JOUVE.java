@@ -15,24 +15,42 @@ public class TP2_Bieres_JOUVE {
      */
     public static void main(String[] args) {
         
-        
-       BouteilleBiere uneBiere = new BouteilleBiere("Cuvée des trolls", 7.0f, "Dubuisson");
-        uneBiere.lireEtiquette();
 
-       
-        uneBiere = new BouteilleBiere("Leffe", 6.6f, "Abbaye de Leffe");
-        uneBiere.lireEtiquette();
-        
-       
-        BouteilleBiere troisiemeBiere = new BouteilleBiere("Chimay Blue", 9.0f, "Chimay");
-        troisiemeBiere.lireEtiquette();
+        // Création des bières
+        BouteilleBiere biere1 = new BouteilleBiere("Cuvée des trolls", 7.0f, "Dubuisson");
+        BouteilleBiere biere2 = new BouteilleBiere("Leffe", 6.6f, "Abbaye de Leffe");
+        BouteilleBiere biere3 = new BouteilleBiere("Chimay Blue", 9.0f, "Chimay");
+        BouteilleBiere biere4 = new BouteilleBiere("Kronenbourg 1664", 5.0f, "Kronenbourg");
 
-       
-        BouteilleBiere quatriemeBiere = new BouteilleBiere("Kronenbourg 1664", 5.0f, "Kronenbourg");
-        quatriemeBiere.lireEtiquette();
-       
-System.out.println(uneBiere) ;
+        // Affichage de l'état initial de chaque bière
+        System.out.println(biere1);
+        System.out.println(biere2);
+        System.out.println(biere3);
+        System.out.println(biere4);
 
+        // Décapsuler certaines bières
+        System.out.println("Décapsulons quelques bières...");
+        biere1.decapsuler();
+        biere3.decapsuler();
+
+        // Affichage de l'état après décapsulage
+        System.out.println(biere1);
+        System.out.println(biere2);
+        System.out.println(biere3);
+        System.out.println(biere4);
+
+        // Essayer de décapsuler à nouveau une bière déjà ouverte
+        if (!biere1.decapsuler()) {
+            System.out.println("Impossible de décapsuler à nouveau " + biere1.nom + ".");
+        }
+
+        // Affichage final de l'état de toutes les bières
+        System.out.println("État final des bières :");
+        System.out.println(biere1);
+        System.out.println(biere2);
+        System.out.println(biere3);
+        System.out.println(biere4);
     }
-    
 }
+
+    
