@@ -45,4 +45,17 @@ public boolean decapsuler() {
             System.out.println("Erreur : bière déjà ouverte.");
             return false; // Échec
         }
-    }}
+        
+    }
+ @Override
+    public String toString() {
+        String chaine_a_retourner;
+        chaine_a_retourner = nom + " (" + degreAlcool + " degrés), Ouverte ? ";
+        if (ouverte) {
+            chaine_a_retourner += "oui";
+        } else {
+            chaine_a_retourner += "non";
+        }
+        return chaine_a_retourner;
+
+}}
