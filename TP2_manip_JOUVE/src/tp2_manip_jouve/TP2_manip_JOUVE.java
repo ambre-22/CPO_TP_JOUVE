@@ -37,6 +37,8 @@ public class TP2_manip_JOUVE {
         System.out.println("nb de calories de Assiette 2 après modification : " + assiette2.nbCalories);
         System.out.println("nb de calories de Assiette 3 après modification : " + assiette3.nbCalories);
     }
+            //réponse à la denrière question : Oui, une référence à un objet peut être un attribut d'un autre objet, et cela représente souvent une relation entre ces objets
+
 }
 
 }
